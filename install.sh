@@ -13,24 +13,6 @@ if [ -z "$IP_DOMAIN" ]; then echo "IP или домен пустой!"; exit 1; 
 cd ~
 cd supabase-selfhost/docker
 
-# === 5. Генерация .env ===
-cp .env.example .env
-POSTGRES_PASS=$(openssl rand -hex 16)
-JWT_SECRET=$(openssl rand -hex 20)
-ANON_KEY=$(openssl rand -hex 20)
-SERVICE_KEY=$(openssl rand -hex 20)
-cat <<EOF >> .env
-POSTGRES_PASSWORD=$POSTGRES_PASS
-JWT_SECRET=$JWT_SECRET
-ANON_KEY=$ANON_KEY
-SERVICE_ROLE_KEY=$SERVICE_KEY
-SITE_URL=https://$IP_DOMAIN
-SUPABASE_PUBLIC_URL=https://$IP_DOMAIN
-DASHBOARD_USERNAME=$DASH_USER
-DASHBOARD_PASSWORD=$DASH_PASS
-EOF
-
-
 # === 8. Выпуск SSL сертификата ===
 certbot --nginx -d $IP_DOMAIN --agree-tos -m $EMAIL --redirect --non-interactive
 
