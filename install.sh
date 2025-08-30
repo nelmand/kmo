@@ -9,6 +9,9 @@ read -p "Введите пароль для входа: " DASH_PASS
 
 if [ -z "$IP_DOMAIN" ]; then echo "IP или домен пустой!"; exit 1; fi
 
+# === 4. Клонирование репозитория Supabase self-hosted ===
+cd ~
+cd supabase-selfhost/docker
 
 # === 5. Генерация .env ===
 cp .env.example .env
