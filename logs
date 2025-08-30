@@ -1,0 +1,38 @@
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for km-sb.hopto.org
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/km-sb.hopto.org/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/km-sb.hopto.org/privkey.pem
+This certificate expires on 2025-11-28.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+Deploying certificate
+Successfully deployed certificate for km-sb.hopto.org to /etc/nginx/sites-enabled/supabase
+Congratulations! You have successfully enabled HTTPS on https://km-sb.hopto.org
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Firewall is active and enabled on system startup
+
+ Установка Supabase self-hosted завершена!
+  Dashboard: https://km-sb.hopto.org
+  Username: 
+  Password: 
+/dev/fd/63: line 38: POSTGRES_PASS: unbound variable
